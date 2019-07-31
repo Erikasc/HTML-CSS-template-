@@ -2,45 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="reset.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>neTix</title>
+    <link href="styles/reset.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
 <header>
+    <!-- Main Navigation -->
+
     <nav>
         <div class="container">
-            <a class="logo">Wa</a>
+            <a class="logo section-list">neTix</a>
             <ul class="navigation">
-                <li><a href="#">home</a></li>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">gallery</a></li>
-                <li><a href="#">testimonials</a></li>
-                <li><a href="#">contact us</a></li>
+                <li><a class="section-list" href="#">home</a></li>
+                <li><a class="section-list" href="#about-use">about us</a></li>
+                <li><a class="section-list" href="#gallery">gallery</a></li>
+                <li><a class="section-list" href="#reviews">Reviews</a></li>
+                <li><a class="section-list" href="#contact">contact us</a></li>
 
             </ul>
         </div>
     </nav>
 
+    <!-- Header Content -->
+
     <div class="header-content">
         <div class="header-text">
-            <h1 class="pulsate">Its awesome</h1>
-            <i class="arrow"></i>
+            <h1 class="pulsate">Cars from JAV</h1>
+            <i class="arrow section-list" data-href="#about-use"></i>
         </div>
-<!--        <img class="main-banner" src="https://cdn.stocksnap.io/img-thumbs/960w/THNBGBQR7S.jpg" alt="Awesonme">-->
+        <img class="main-banner" src="https://cdn.stocksnap.io/img-thumbs/960w/THNBGBQR7S.jpg" alt="Awesonme">
     </div>
 
 </header>
 
 <section>
-    <div class="about-use container section">
+    <div class="about-use container section" id="about-use">
         <h3>About us</h3>
 
         <div class="column">
             <i class="icon-trophy"></i>
-            <p>Nunquam imperium genetrix.Nunquam imperium genetrix.Nunquam imperium genetrix.Nunquam imperium
-                genetrix.Nunquam imperium genetrix.Nunquam imperium genetrix.</p>
+            <p>NIt is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters,</p>
         </div>
 
         <div class="column">
@@ -63,7 +69,7 @@
 
     </div>
 
-    <ul class="gallery">
+    <ul class="gallery" id="gallery">
         <li><img src="./img/gallery/gallery-1.jpg" alt=""></li>
         <li><img src="./img/gallery/gallery-2.jpg" alt=""></li>
         <li><img src="./img/gallery/gallery-13.jpg" alt=""></li>
@@ -83,9 +89,80 @@
 
     </ul>
 
+    <section id="reviews" class="section">
+        <h3>Reviews</h3>
+
+        <div class="reviews">
+
+            <ul>
+                <li>
+                    <div class="user-data">
+                        <img src="./img/users/user-1.jpg" alt=""/>
+                        <span class="user-name">Alicia Shannon</span>
+                    </div>
+                    <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit eleifend tortor a finibus.
+                        Vivamus diam odio, mattis nec venenatis in, lobortis vitae diam. Aliquam erat volutpat. Nam
+                        cursus ac lacus sed semper. "</p>
+                </li>
+                <li>
+                    <div class="user-data">
+                        <img src="./img/users/user-2.jpg" alt=""/>
+                        <span class="user-name">Jack Wilson</span>
+                    </div>
+                    <p>" Vivamus id metus ut ligula rutrum rhoncus. Vivamus ornare ipsum quis tincidunt commodo. Morbi
+                        eget diam sit amet sapien maximus semper. Pellentesque condimentum lacus vitae enim porta. "</p>
+                </li>
+                <li>
+                    <div class="user-data">
+                        <img src="./img/users/user-3.jpg" alt=""/>
+                        <span class="user-name">Sienna Johnson</span>
+                    </div>
+                    <p>" Etiam dui nulla, laoreet at arcu ut, iaculis lacinia dolor. Fusce ac feugiat lectus. Fusce
+                        sodales nisl egestas, scelerisque nisl eu, suscipit neque. Pellentesque dapibus massa augue,
+                        vitae porta lorem viverra vitae. "</p>
+                </li>
+            </ul>
+
+            <i id="review-prev" class="arrow arrow-left"></i>
+            <i id="review-next" class="arrow arrow-right"></i>
+        </div>
+
+    </section>
+
+
+    <!-- Contact Form -->
+
+    <section id="contact" class="section">
+        <h3>Contact US</h3>
+
+
+        <form action="" method="">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="surname" placeholder="Surname">
+            <input type="email" name="email" placeholder="Email">
+            <textarea placeholder="Your Message"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </section>
+
+
 </section>
 
-<footer></footer>
+<footer>
+    <div class="container">
+        <a class="logo section-list">neTix</a>
+
+        <ul class="social-icons">
+            <li><a href="#"><i class="icon-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-vimeo"></i></a></li>
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-tumblr"></i></a></li>
+        </ul>
+    </div>
+
+</footer>
 
 </body>
 </html>
