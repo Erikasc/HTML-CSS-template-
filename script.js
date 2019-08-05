@@ -52,7 +52,8 @@
 
         document.addEventListener('click', () => {
                 if (event.target === prevArrow) {
-                    lastChild = reviews.insertAdjacentElement('afterbegin', lastChild)
+                    lastChild = reviews.lastElementChild;
+                    reviews.insertAdjacentElement('afterbegin', lastChild)
                 } else if (event.target === nextArrow) {
                     firstChild = reviews.firstElementChild;
                     reviews.insertAdjacentElement('beforeend', firstChild)
@@ -62,6 +63,40 @@
     };
 
 
+    const onGalleryImageClick = () => {
+        const galleryImageList = document.querySelectorAll('#gallery li');
+        const galleryImages = [...galleryImageList];
+
+        galleryImages.forEach(image => {
+            image.addEventListener('click', event => {
+                galleryImageOpen(event.target);
+            })
+        });
+    }
+
+    const galleryImageOpen = image => {
+        const imageSrc = image.getAttribute("src");
+        const openedImage = `<div class="backdrop">
+<img src="${imageSrc}" alt="" />
+<span class="backdrop-close">X</span></div>`;
+
+        document.body.insertAdjacentHTML('beforeend', openedImage);
+        galleryImageClose();
+
+
+
+    };
+
+    const galleryImageClose = () => {
+        const closeButton = document.querySelector('.backdrop-close');
+        closeButton.addEventListener('click', () => {
+            const backdrop = document.querySelector('.backdrop');
+            backdrop.remove();
+        })
+    }
+
+
+
     window.addEventListener("scroll", () => {
         addMenuBackground();
     });
@@ -69,5 +104,6 @@
 
     onNavItemClick();
     reviewChange();
+    onGalleryImageClick();
 
 })();
